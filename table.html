@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>table</title>
+    <link rel="stylesheet" href="static/css/bootstrap.css">
+    <link rel="stylesheet" href="static/css/bootstrap-table.css">
+</head>
+<body>
+
+
+<div class="container">
+    <div class="row ">
+        <div class="">
+            <table class="table table-hover table-striped" id="table">
+
+                <thead>
+                <tr>
+                    <th >时间</th>
+                    <th>详情</th>
+                    <th>交易明细</th>
+                    <th>剩余积分</th>
+                </tr>
+                </thead>
+
+                <tbody id="tbody"></tbody>
+            </table>
+        </div>
+        <!--<div class="table-responsive">-->
+        <!--<table class="table table-hover table-striped">-->
+        <!--<tbody >-->
+        <!--<tr>-->
+        <!--<td>  <input type="text" class="form-control" id="input1" placeholder="时间"></td>-->
+        <!--<td>  <input type="text" class="form-control"id="input2" placeholder="详情"></td>-->
+        <!--<td>  <input type="text" class="form-control"id="input3" placeholder="交易明细"></td>-->
+        <!--<td>  <input type="text" class="form-control"id="input4" placeholder="剩余积分"></td>-->
+        <!--<td><button class="btn" id="tablebtn">添加</button></td>-->
+        <!--</tr>-->
+
+        <!--</tbody>-->
+        <!--</table>-->
+        <!--</div>-->
+
+    </div>
+</div>
+</body>
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="static/js/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="static/js/bootstrap.min.js"></script>
+<script src="static/js/bootstrap.table.js"></script>
+
+
+<script>
+
+    $('#table').bootstrapTable({
+        url: 'tablelist.json',
+        search:true,
+        pagination:true,
+        columns: [{
+            field: 'time',
+            title: '时间'
+        }, {
+            field: 'xq',
+            title: '详情'
+        }, {
+            field: 'jymx',
+            title: '交易明细'
+        },{
+            field: 'syjifen',
+            title: '剩余积分'
+        } ]
+    });
+</script>
+</html>
