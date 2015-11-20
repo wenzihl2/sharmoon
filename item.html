@@ -214,23 +214,35 @@
 </div>
 
 <div class="container">
-    <div id="tabs"class="row">
-        <ul class="nav bg-hui">
-            <li class="navbar-left col-xs-3"><div class="row"><a href="#tabs-1" class="btn">详细信息</a></div> </li>
-            <li class="navbar-left col-xs-3"><div class="row"><a href="#tabs-2" class="btn">规格参数</a></div></li>
-            <li class="navbar-left col-xs-3"><div class="row"><a href="#tabs-3" class="btn">量体制定</a></div></li>
-        </ul>
-        <div id="itemimg">
-        <div id="tabs-1">
-<img src="static/images/iteminfo.jpg" class="img-responsive">        </div>
-        <div id="tabs-2">
-            <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+
+
+    <ul id="myTab" class="nav nav-tabs">
+        <li class="active">
+            <a href="#xxxx" data-toggle="tab">
+                详细信息
+            </a>
+        </li>
+        <li><a href="#ggcs" data-toggle="tab">规格参数</a></li>
+        <li><a href="#ltzd" data-toggle="tab">量体制定</a></li>
+
+    </ul>
+    <div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade in active" id="xxxx">
+            <p>W3Cschoool菜鸟教程是一个提供最新的web技术站点，本站免费提供了建站相关的技术文档，帮助广大web技术爱好者快速入门并建立自己的网站。菜鸟先飞早入行——学的不仅是技术，更是梦想。</p>
+
+            <img src="static/images/iteminfo.jpg" class="img-responsive">
         </div>
-        <div id="tabs-3">
-            <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
-            <p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
-        </div></div>
+        <div class="tab-pane fade" id="ggcs">
+            <p>iOS 是一个由苹果公司开发和发布的手机操作系统。最初是于 2007 年首次发布 iPhone、iPod Touch 和 Apple
+                TV。iOS 派生自 OS X，它们共享 Darwin 基础。OS X 操作系统是用在苹果电脑上，iOS 是苹果的移动版本。</p>
+        </div>
+        <div class="tab-pane fade" id="ltzd">
+            <p>jMeter 是一款开源的测试软件。它是 100% 纯 Java 应用程序，用于负载和性能测试。</p>
+        </div>
+
     </div>
+
+
 </div>
 
 
@@ -311,18 +323,5 @@
     });
 
 
-    $(function() {
-        $(".flexslider").flexslider({
-
-            slideshowSpeed: 4000, //展示时间间隔ms
-            animationSpeed: 400, //滚动时间ms
-            touch: true, //是否支持触屏滑动
-            animation: "slide",
-            controlNav: false,
-            //animationLoop: false,
-            //slideshow: false,
-            //itemWidth: 210
-        });
-    });
 </script>
 </html>

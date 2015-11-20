@@ -87,7 +87,13 @@ $.fn.zwfrMenu = function (option) {
                 menudiv.appendChild(menuitemlistdiv);
                 menuitemlistdiv.setAttribute("class", "menuitemlist" + i);
                 $(menutitlediv).click(function () {
-                    $(this.nextSibling).slideToggle();
+
+                    for (i=1;i<this.parentNode.parentNode.childNodes.length;i++){
+                        console.log(i);
+                        console.log(this.parentNode.parentNode.childNodes[i].firstChild)
+                        $(this.parentNode.parentNode.childNodes[i].firstChild.nextSibling).hide();
+                    }
+                    $(this.nextSibling).show();
                 });
                 menutitlediv.appendChild(document.createTextNode(a[i]['name']));
                 if (a[i].childs) {
